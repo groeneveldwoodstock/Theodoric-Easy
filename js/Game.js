@@ -62,7 +62,7 @@ Theodoric.Game.prototype = {
         this.playerAttacks = this.generateAttacks('sword', 1);
         this.playerSpells = this.generateAttacks('spell', 1);
         this.bossAttacks = this.generateAttacks('spellParticle', 5,2000, 300);
-        this.bossAttacks = this.generateAttacks('fireball', 1, 2000, 300);
+        this.bossAttacks = this.generateAttacks('fireball', 1, 1000, 300);
 
         // Generate enemies - must be generated after player and player.level
         this.generateEnemies(100);
@@ -553,7 +553,7 @@ Theodoric.Game.prototype = {
         enemy.animations.add('right', [33, 34, 35], 10, true);
         enemy.animations.add('up', [45, 46, 47], 10, true);
 
-        return this.setStats(enemy, 'Skeleton', 10, 40, 5, 5, 6);
+        return this.setStats(enemy, 'Skeleton', 10, 20, 5, 5, 6);
     },
 
     generateSlime: function (enemy) {
@@ -644,7 +644,7 @@ Theodoric.Game.prototype = {
 
         console.log('Generated dragon!');
 
-        return this.setStats(boss, 'Dragon', 1000, 25, 50, 500, 0);
+        return this.setStats(boss, 'Dragon', 1000, 15, 50, 500, 0);
     },
 
     generateObstacles: function() {
